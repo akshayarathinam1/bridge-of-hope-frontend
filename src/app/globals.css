@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+/* ================================================
+   HOPEBRIDGE FOUNDATION — DESIGN SYSTEM
+   Brand: Navy #222A59 · White #ffffff · Orange #FF6100
+   Font: Inter
+================================================ */
+
+@theme {
+  /* Brand Core Colors */
+  --color-brand-primary:      #222A59;
+  --color-brand-navy:         #222A59;
+  --color-brand-navy-dark:    #171d3e;
+  --color-brand-navy-light:   #eeeffe;
+
+  --color-brand-orange:       #FF6100;
+  --color-brand-orange-dark:  #d95300;
+  --color-brand-orange-deeper:#b34400;
+  --color-brand-orange-light: #fff1e6;
+
+  --color-brand-white:        #ffffff;
+
+  /* Aliased theme tokens for comprehensive component integration */
+  --color-brand-red:          #FF6100;
+  --color-brand-red-dark:     #d95300;
+  --color-brand-red-deeper:   #b34400;
+  --color-brand-red-light:    #fff1e6;
+  --color-brand-black:        #222A59;
+  --color-brand-black-soft:   #2e3870;
+
+  /* Font */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Ease */
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --breakpoint-xs: 420px;
+}
+
+/* Base */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: #ffffff;
+  color: var(--color-brand-black);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Selection */
+::selection { background: var(--color-brand-red); color: #fff; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #f5f5f5; }
+::-webkit-scrollbar-thumb { background: var(--color-brand-red); border-radius: 4px; }
+
+/* Focus */
+:focus-visible {
+  outline: 2px solid var(--color-brand-red);
+  outline-offset: 2px;
+}
+
+/* Container */
+.container-site {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+@media (min-width: 480px) { .container-site { padding-inline: 1.25rem; } }
+@media (min-width: 768px) { .container-site { padding-inline: 2rem; } }
+@media (min-width: 1280px) { .container-site { padding-inline: 2.5rem; } }
